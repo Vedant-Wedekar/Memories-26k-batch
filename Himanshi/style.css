@@ -438,7 +438,7 @@ body {
 .footer-rule { margin-bottom:10px; }
 .footer-text {
   font-size:.7rem; letter-spacing:.14em;
-  text-transform:uppercase; color:var(--ink-faint);
+  text-transform:uppercase; color:black;
 }
 
 /* ══════════════════════════════════════════

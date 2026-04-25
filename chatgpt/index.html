@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memories</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <h1 class="title">For the memories we created ❤️</h1>
+
+    <!-- Main Video -->
+    <div class="video-container fade-in">
+      <video id="mainVideo" autoplay muted playsinline>
+        <source src="videos/v1.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <!-- Thumbnails -->
+    <div class="thumbnails">
+
+      <div class="thumb active" onclick="changeVideo('videos/v1.mp4', this)">
+        <img src="images/1.jpg">
+      </div>
+
+      <div class="thumb" onclick="changeVideo('videos/v3.mp4', this)">
+        <img src="images/1.png">
+      </div>
+
+      <div class="thumb" onclick="changeVideo('videos/v5.mp4', this)">
+        <img src="images/8.jpg">
+      </div>
+
+    </div>
+
+    <!-- Music Button -->
+    <button class="music-btn" onclick="toggleMusic()">🎵</button>
+
+    <audio id="bgMusic" loop>
+      <source src="videos/music.mp3" type="audio/mpeg">
+    </audio>
+
+    <p class="footer">Made with love ❤️</p>
+
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>

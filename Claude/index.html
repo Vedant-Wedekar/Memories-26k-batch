@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For the Memories ❤️</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Grain overlay -->
+  <div class="grain"></div>
+
+  <!-- Floating petals background -->
+  <div class="petals" id="petals"></div>
+
+  <main class="container">
+
+    <!-- Header -->
+    <header class="header">
+      <p class="subtitle">a little something</p>
+      <h1 class="title">For the memories<br/><em>we created</em> ❤️</h1>
+    </header>
+
+    <!-- Main video player -->
+    <section class="player-wrap">
+      <div class="player-glow"></div>
+      <div class="player-frame">
+        <video
+          id="mainVideo"
+          class="main-video"
+          autoplay
+          muted
+          playsinline
+          controls
+        >
+          <source src="videos/video1.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+
+        <!-- Music toggle -->
+        <button class="music-btn" id="musicBtn" title="Toggle background music" aria-label="Toggle background music">
+          <span class="music-icon" id="musicIcon">♪</span>
+          <audio id="bgMusic" loop>
+            <source src="audio/bg.mp3" type="audio/mpeg" />
+          </audio>
+        </button>
+      </div>
+    </section>
+
+    <!-- Video label -->
+    <div class="now-playing">
+      <span class="dot"></span>
+      <span id="nowPlayingLabel">Memory 1</span>
+    </div>
+
+    <!-- Thumbnail strip -->
+    <section class="thumbnails">
+      <div class="thumb-label">Choose a memory</div>
+      <div class="thumb-row">
+
+        <button class="thumb active" data-video="videos/video1.mp4" data-label="Memory 1" aria-label="Play Memory 1">
+          <div class="thumb-inner">
+            <img src="images/thumb1.jpg" alt="Memory 1" loading="lazy" />
+            <div class="thumb-overlay">
+              <span class="play-icon">▶</span>
+            </div>
+            <div class="thumb-num">01</div>
+          </div>
+          <span class="thumb-title">Memory 1</span>
+        </button>
+
+        <button class="thumb" data-video="videos/video2.mp4" data-label="Memory 2" aria-label="Play Memory 2">
+          <div class="thumb-inner">
+            <img src="images/thumb2.jpg" alt="Memory 2" loading="lazy" />
+            <div class="thumb-overlay">
+              <span class="play-icon">▶</span>
+            </div>
+            <div class="thumb-num">02</div>
+          </div>
+          <span class="thumb-title">Memory 2</span>
+        </button>
+
+        <button class="thumb" data-video="videos/video3.mp4" data-label="Memory 3" aria-label="Play Memory 3">
+          <div class="thumb-inner">
+            <img src="images/thumb3.jpg" alt="Memory 3" loading="lazy" />
+            <div class="thumb-overlay">
+              <span class="play-icon">▶</span>
+            </div>
+            <div class="thumb-num">03</div>
+          </div>
+          <span class="thumb-title">Memory 3</span>
+        </button>
+
+      </div>
+    </section>
+
+    <!-- Message section -->
+    <section class="message-section">
+      <div class="quote-mark">"</div>
+      <p class="message-text">
+        Some moments are too beautiful to forget.<br/>
+        This is for all of them.
+      </p>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Made with love ❤️</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

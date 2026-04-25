@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Memories | For You</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container fade-in">
+        <header>
+            <h1>For the memories we created ❤️</h1>
+        </header>
+
+        <div class="video-container">
+            <video id="main-video" autoplay muted playsinline loop>
+                <source src="videos/video1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <div class="thumbnail-section">
+            <div class="thumbnail active" data-video="videos/video1.mp4">
+                <img src="images/thumb1.jpg" alt="Memory 1">
+                <div class="overlay"><span>I</span></div>
+            </div>
+            <div class="thumbnail" data-video="videos/video2.mp4">
+                <img src="images/thumb2.jpg" alt="Memory 2">
+                <div class="overlay"><span>II</span></div>
+            </div>
+            <div class="thumbnail" data-video="videos/video3.mp4">
+                <img src="images/thumb3.jpg" alt="Memory 3">
+                <div class="overlay"><span>III</span></div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Made with love ❤️</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

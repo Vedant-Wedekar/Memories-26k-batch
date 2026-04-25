@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#faf6ef" />
+  <title>For the Memories ❤️</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Noise texture layer -->
+  <div class="noise"></div>
+
+  <!-- Ambient light orbs -->
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+
+  <!-- Floating particles canvas -->
+  <canvas id="particles"></canvas>
+
+  <main class="container" id="top">
+
+    <!-- ── HEADER ── -->
+    <header class="header">
+      <div class="stamp">
+        <span class="stamp-text">our story</span>
+      </div>
+      <h1 class="title">
+        For the memories<br/>
+        <em>we created</em>
+      </h1>
+      <p class="tagline">❤️</p>
+      <div class="header-rule">
+        <span class="rule-line"></span>
+        <span class="rule-diamond">◆</span>
+        <span class="rule-line"></span>
+      </div>
+    </header>
+
+    <!-- ── MAIN PLAYER ── -->
+    <section class="player-section">
+
+      <!-- Film-strip perforations -->
+      <div class="film-strip left" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span><span></span>
+      </div>
+      <div class="film-strip right" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span><span></span>
+      </div>
+
+      <div class="player-frame">
+
+        <!-- Glare effect -->
+        <div class="player-glare"></div>
+
+        <video
+          id="mainVideo"
+          class="main-video"
+          autoplay
+          muted
+          playsinline
+          controls
+          preload="metadata"
+        >
+          <source src="videos/v1.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+
+        <!-- Music toggle -->
+        <button class="music-btn" id="musicBtn" aria-label="Toggle background music">
+          <svg id="musicIconPlay" class="music-svg" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 3L8 8L12 6L8 3Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+            <path d="M8 8C8 8 5 9 5 12C5 15 8 16 8 16" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+            <path d="M12 6C12 6 15 7 15 10C15 13 12 14 12 14" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+          </svg>
+          <svg id="musicIconPause" class="music-svg hidden" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="5" y="4" width="3" height="12" rx="1" fill="currentColor" opacity="0.8"/>
+            <rect x="12" y="4" width="3" height="12" rx="1" fill="currentColor" opacity="0.8"/>
+          </svg>
+          <audio id="bgMusic" loop>
+            <source src="audio/bg.mp3" type="audio/mpeg" />
+          </audio>
+        </button>
+
+      </div><!-- /.player-frame -->
+    </section>
+
+    <!-- ── NOW PLAYING ── -->
+    <div class="now-playing" id="nowPlaying">
+      <span class="np-label">now playing</span>
+      <span class="np-sep">·</span>
+      <span class="np-title" id="nowPlayingLabel">Memory 1</span>
+    </div>
+
+    <!-- ── THUMBNAIL STRIP ── -->
+    <section class="thumb-section">
+      <p class="section-label">— select a memory —</p>
+
+      <div class="thumb-row">
+
+        <button class="thumb active"
+          data-video="videos/v1.mp4"
+          data-label="Memory 1"
+          data-num="01"
+          aria-label="Play Memory 1">
+          <div class="thumb-frame">
+            <img src="images/1.jpg" alt="Memory 1" loading="lazy" />
+            <div class="thumb-play">
+              <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M8 5.14v14l11-7-11-7z"/></svg>
+            </div>
+          </div>
+          <span class="thumb-num">01</span>
+          <span class="thumb-name">Memory 1</span>
+        </button>
+
+        <button class="thumb"
+          data-video="videos/v3.mp4"
+          data-label="Memory 2"
+          data-num="02"
+          aria-label="Play Memory 2">
+          <div class="thumb-frame">
+            <img src="images/1.png" alt="Memory 2" loading="lazy" />
+            <div class="thumb-play">
+              <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M8 5.14v14l11-7-11-7z"/></svg>
+            </div>
+          </div>
+          <span class="thumb-num">02</span>
+          <span class="thumb-name">Memory 2</span>
+        </button>
+
+        <button class="thumb"
+          data-video="videos/8.mp4"
+          data-label="Memory 3"
+          data-num="03"
+          aria-label="Play Memory 3">
+          <div class="thumb-frame">
+            <img src="images/8.jpg" alt="Memory 3" loading="lazy" />
+            <div class="thumb-play">
+              <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M8 5.14v14l11-7-11-7z"/></svg>
+            </div>
+          </div>
+          <span class="thumb-num">03</span>
+          <span class="thumb-name">Memory 3</span>
+        </button>
+
+      </div>
+    </section>
+
+    <!-- ── QUOTE CARD ── -->
+    <section class="quote-section">
+      <div class="quote-card">
+        <span class="quote-mark open">"</span>
+        <p class="quote-text">
+          Some moments are too<br/>
+          beautiful to forget.<br/>
+          <em>This is for all of them.</em>
+        </p>
+        <span class="quote-mark close">"</span>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="footer-rule">
+      <span class="rule-line"></span>
+      <span class="rule-diamond">◆</span>
+      <span class="rule-line"></span>
+    </div>
+    <p class="footer-text">Made with love ❤️</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

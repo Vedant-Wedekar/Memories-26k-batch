@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #1a1a1a, #2c2c2c);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 500px;
+  padding: 15px;
+  text-align: center;
+}
+
+/* Title */
+.title {
+  font-size: 20px;
+  margin-bottom: 15px;
+  opacity: 0.9;
+}
+
+/* Video */
+.video-container {
+  width: 100%;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+}
+
+video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 18px;
+  transition: opacity 0.4s ease;
+}
+
+/* Thumbnails Container */
+.thumbnails {
+  display: flex;
+  gap: 12px;
+  margin-top: 18px;
+  justify-content: center;
+}
+
+/* Thumbnail Card */
+.thumb {
+  flex: 1;
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.35s ease;
+
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+}
+
+/* Thumbnail Image */
+.thumb img {
+  width: 100%;
+  height: 90px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+/* Hover */
+.thumb:hover img {
+  transform: scale(1.08);
+}
+
+.thumb:hover {
+  transform: translateY(-5px);
+}
+
+/* Active State */
+.thumb.active {
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+
+/* Overlay */
+.thumb::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.4), transparent);
+  opacity: 0.6;
+}
+
+/* Playing Tag */
+.thumb.active::before {
+  content: "Playing";
+  position: absolute;
+  bottom: 6px;
+  left: 8px;
+  font-size: 10px;
+  background: rgba(0,0,0,0.6);
+  padding: 3px 6px;
+  border-radius: 6px;
+}
+
+/* Music Button */
+.music-btn {
+  margin-top: 15px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 50px;
+  background: #ffffff20;
+  color: white;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+}
+
+.music-btn:hover {
+  background: #ffffff40;
+}
+
+/* Footer */
+.footer {
+  margin-top: 20px;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+/* Fade In */
+.fade-in {
+  animation: fadeIn 1.2s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .thumb img {
+    height: 80px;
+  }
+}

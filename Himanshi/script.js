@@ -71,7 +71,7 @@
     }
   }
 
-  const COUNT = 38;
+  const COUNT = 20;
   function spawnAll() {
     particles = [];
     for (let i = 0; i < COUNT; i++) {
